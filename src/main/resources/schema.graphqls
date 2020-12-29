@@ -19,3 +19,10 @@ type Car {
     color: String!
     owner: User
 }
+
+type Mutation {
+    makeUser(id: Int!, name: String): User!
+    deleteUser(id: Int!): Boolean
+    createCar(id: Int!, make: String!, model: String!, color: String!): Car
+    deleteCar(id: Int!): Boolean
+}

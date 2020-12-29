@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * @author satya
@@ -33,6 +34,9 @@ public class CarData {
     }
 
 
+    public Boolean removeCar(int carId) {
+        Predicate<Car> isQualified = car -> car.getId().equals(carId);
+        return cars.removeIf(isQualified);
 
-
+    }
 }
