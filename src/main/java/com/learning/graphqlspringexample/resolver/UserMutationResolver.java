@@ -19,7 +19,7 @@ public class UserMutationResolver implements GraphQLMutationResolver {
     }
 
     public User makeUser(int id, String name){
-        User newUser = new User(id,name,new Integer[]{});
+        User newUser =  User.builder().id(id).name(name).vehicleIds(new Integer[]{}).build();
         userData.saveUser(newUser);
         return newUser;
     }

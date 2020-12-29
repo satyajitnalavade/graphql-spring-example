@@ -1,19 +1,16 @@
 package com.learning.graphqlspringexample.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 /**
  * @author satya
  */
-@Getter
-@Setter
-@NoArgsConstructor
+@Builder
+@Value
 @AllArgsConstructor
 public class User {
 
-    private Integer id;
-    private String name;
-    private Integer[] vehicleIds;
+    Integer id;
+    String name;
+    Integer[] vehicleIds;
 }

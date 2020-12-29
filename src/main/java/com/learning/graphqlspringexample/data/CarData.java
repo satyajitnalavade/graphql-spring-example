@@ -16,9 +16,9 @@ public class CarData {
     private final List<Car>cars = new ArrayList<>();
 
     public CarData(){
-        cars.add(new Car(1,"Honda","Odyssey","Brown",1));
-        cars.add(new Car (2,"Toyota", "Corolla", "Blue",3));
-        cars.add(new Car (3,"Oldsmobile","Intrigue","Silver",1));
+        cars.add(Car.builder().id(1).make("Honda").model("Odyssey").color("Brown").ownedBy(1).build());
+        cars.add(Car.builder().id(2).make("Toyota").model("Corolla").color("Blue").ownedBy(3).build());
+        cars.add( Car.builder().id(2).make("Oldsmobile").model("Intrigue").color("Silver").ownedBy(1).build());
     }
 
     public Car getCar(int id){

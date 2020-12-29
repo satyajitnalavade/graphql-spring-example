@@ -25,7 +25,7 @@ public class VehicleResolver implements GraphQLResolver<User> {
     }
 
     public List<Car> vehicles(User user) {
-        return Arrays.stream(user.getVehicleIds()).map(integer -> { return carData.getCar(integer);}).collect(Collectors.toList());
+        return Arrays.stream(user.getVehicleIds()).map(vehicleId -> { return carData.getCar(vehicleId);}).collect(Collectors.toList());
     }
 
 

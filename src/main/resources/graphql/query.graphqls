@@ -1,0 +1,7 @@
+type Query {
+    users: [User]
+    user(id: ID): User
+    cars: [Car]
+    car(id: ID): Car
+    me: User
+}

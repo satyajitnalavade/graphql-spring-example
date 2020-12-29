@@ -15,10 +15,11 @@ public class UserData {
     private List<User> users = new ArrayList<>();
     
     public UserData() {
-        users.add(new User(1,"Satya",new Integer[]{1,3}));
-        users.add(new User(2,"Sumit",new Integer[]{}));
-        users.add(new User(3, "Vaishali",new Integer[]{3}));
-        users.add(new User(4, "Arjun",new Integer[]{}));
+        users.add(User.builder().id(1).name("Satya").vehicleIds(new Integer[]{1,3}).build());
+        users.add( User.builder().id(2).name("Sumit").vehicleIds(new Integer[]{}).build());
+        users.add( User.builder().id(3).name("Vaishali").vehicleIds(new Integer[]{2}).build());
+        users.add(User.builder().id(4).name("Arjun").vehicleIds(new Integer[]{}).build());
+
     }
 
     public User getUser(int id){

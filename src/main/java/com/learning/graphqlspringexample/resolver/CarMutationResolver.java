@@ -22,7 +22,7 @@ public class CarMutationResolver implements GraphQLMutationResolver {
     }
 
     public Car createCar(int id, String make, String model, String color){
-        Car car = new Car(id,make,model,color,0);
+        Car car =  Car.builder().id(id).make(make).model(model).color(color).ownedBy(0).build();
         carData.saveCar(car);
         return car;
     }
