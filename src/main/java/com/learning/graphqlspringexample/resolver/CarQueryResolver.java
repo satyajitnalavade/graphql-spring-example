@@ -4,7 +4,6 @@ import com.learning.graphqlspringexample.data.CarData;
 import com.learning.graphqlspringexample.model.Car;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 /**
