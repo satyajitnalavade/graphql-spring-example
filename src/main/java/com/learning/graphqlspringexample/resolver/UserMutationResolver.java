@@ -25,7 +25,6 @@ public class UserMutationResolver implements GraphQLMutationResolver {
     }
 
     public Boolean deleteUser(int userId){
-
         return userData.removeUser(userId);
     }
 
